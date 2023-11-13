@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>My Wiki - {{.Title}}</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .edit-link {
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    font-size: 0.9em;
+  }
+  .edit-link:hover {
+    background-color: #e2e6ea;
+  }
+  .wiki-body {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>{{.Title}}</h1>
+
+  <p><a href="/edit/{{.Title}}" class="edit-link">Edit this page</a></p>
+
+  <div class="wiki-body">{{.DisplayBody}}</div>
+</div>
+</body>
+</html>
